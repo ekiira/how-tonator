@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo face.png')}}"/>
+  <title>HowToNator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+
+<section class="landing pb-5">
+
+  <nav id="idea" class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <div class="navbar-header text-white">
+        <a class="navbar-brand"> <span><img src="../static/images/logo face.png" alt="logo"class="img-fluid image" /></span> HowToNator</a>
+      </div>
+      </div>
+    </div>
+</nav>
+
+  <div class="wrapper">
+    <div class="d-flex justify-content-center">
+   <div class="p-2 p-md-4">
+    <h3 class="pt-4 big-text">Doing it yourself just got a lot easier</h3>
+
+    <div class="chat py-5">
+      <div class="container">
+        <div class="bot">
+          <div class="pb-3">
+            <img src="{{ url_for('static', filename='images/logo face.png')}}" alt="logo" class="img-fluid pb-3">
+            <!-- <br/> -->
+            <div>
+            <div class="d-flex justify-content-start">
+                <div class="msg py-3 px-4">
+                    Hey Buddy, Ask me how to do anything
+              </div>
+            </div>
+          </div>
+            
+          </div>
+
+          <div>
+            <div class="d-flex justify-content-end">
+              <div>
+                <div class="type pt-3">
+                  Typing...
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pb-3">
+            <img src="{{ url_for('static', filename='images/logo face.png')}}" alt="logo" class="img-fluid pb-3">
+            <!-- <br/> -->
+<div>
+            <div class="d-flex justify-content-start">
+              <div class="msg py-3 px-4">
+                  You don’t need to type Buddy, you can show me
+              </div>
+            </div>
+          </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <p class="small-text"> We are currently in our private beta, 
+      but we hope to launch in the coming weeks. 
+      Super excited like we are? 
+      Get notified when we launch.
+    </p>
+
+    {% if message %}
+    <p class="message">{{ message | safe }}</p>
+    {% endif %}
+    <form action="/submit" method="POST"  class="pb-4">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-7 pl-0 pr-0 email">
+          <input type="email" class="form-control text-white" name="email" required placeholder="your email @domain">
+        </div>
+        <div class="col-12 col-md-6 col-lg-5 notified">
+          <button class="btn btn-block button py-2 px-1 w-75">GET NOTIFIED</button>
+        </div>
+      </div>
+    </form> 
+   </div>
+       
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/index.js')}}"></script>
+</body>
+</html>
