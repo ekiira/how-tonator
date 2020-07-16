@@ -5,104 +5,328 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo face.png')}}"/>
   <title>HowToNator</title>
+  
+  <!-- bootstrap css -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+  <!-- custom css -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+
+  <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- animation on scroll css -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
+
 <body>
  
-
-<section class="landing pb-5">
-
-  <nav id="idea" class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <div class="navbar-header text-white">
-        <a class="navbar-brand"> <span><img src="../static/images/logo face.png" alt="logo"class="img-fluid image" /></span> HowToNator</a>
-      </div>
-      </div>
-    </div>
-</nav>
-
-  <div class="wrapper">
-    <div class="d-flex justify-content-center">
-   <div class="p-2 p-md-4">
-    <h3 class="pt-4 big-text">Doing it yourself just got a lot easier</h3>
-
-    <div class="chat py-5">
-      <div class="container">
-        <div class="bot">
-          <div class="pb-3">
-            <img src="{{ url_for('static', filename='images/logo face.png')}}" alt="logo" class="img-fluid pb-3">
-            <!-- <br/> -->
-            <div>
-            <div class="d-flex justify-content-start">
-                <div class="msg py-3 px-4">
-                    Hey Buddy, Ask me how to do anything
-              </div>
-            </div>
-          </div>
-            
-          </div>
-
-          <div>
-            <div class="d-flex justify-content-end">
-              <div>
-                <div class="type pt-3">
-                  Typing...
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="pb-3">
-            <img src="{{ url_for('static', filename='images/logo face.png')}}" alt="logo" class="img-fluid pb-3">
-            <!-- <br/> -->
-<div>
-            <div class="d-flex justify-content-start">
-              <div class="msg py-3 px-4">
-                  You don’t need to type Buddy, you can show me
-              </div>
-            </div>
-          </div>
-            
-          </div>
-        </div>
-      </div>
-    </div>
+<!-- particles.js container --> 
+<div id="particles-js"></div >
 
     
-    <p class="small-text"> We are currently in our private beta, 
-      but we hope to launch in the coming weeks. 
-      Super excited like we are? 
-      Get notified when we launch.
-    </p>
+  <section class="landing pb-5">
+    <nav id="idea" class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <div class="navbar-header text-white">
+          <a class="navbar-brand"> <span><img src="../static/images/logo face.png" alt="logo"class="img-fluid image" /></span> HowToNator</a>
+        </div>
+        </div>
+    </nav>
 
-    {% if message %}
-    <p class="message">{{ message | safe }}</p>
-    {% endif %}
-    <form action="/submit" method="POST"  class="pb-4">
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-7 pl-0 pr-0 email">
-          <input type="email" class="form-control text-white" name="email" required placeholder="your email @domain">
+    <div class="wrapper">
+      <div class="d-flex justify-content-center">
+        <div class="p-2 p-md-4">
+          <h4 class="pt-4 big-text">We redefined what it means to Do It Yourself</h4>
+           <div class="chat py-5">
+            <div class="container">
+              <div class="bot">
+                <div id="one">
+                <div class="pb-3">
+                  <img src="{{ url_for('static', filename='images/logo face.png')}}" alt="logo" class="img-fluid pb-3">
+                  <div>
+                    <div class="d-flex justify-content-start">
+                      <div class="msg py-3 px-4">
+                          Hey Buddy, Ask me how to do anything
+                    </div>
+                  </div>
+                </div>
+                </div>
+                </div> 
+                <div id="two">
+                <div class="d-flex justify-content-end">
+                  <div>
+                    <div class="type pt-3">
+                      Typing...
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="three">
+                <div class="pb-3">
+                  <img src="{{ url_for('static', filename='images/logo face.png')}}" alt="logo" class="img-fluid pb-3">
+                    <div>
+                      <div class="d-flex justify-content-start">
+                        <div class="msg py-3 px-4">
+                            You don’t need to type Buddy, you can show me
+                        </div>
+                      </div>
+                    </div>
+          
+                </div>
+              </div>
+ 
+              </div>
+            </div>
+          </div>  
+
+          <p class="small-text"> We are currently in our private beta,  
+            but we hope to launch in the coming weeks. 
+            Super excited like we are? 
+            Get notified when we launch.
+          </p>
+
+          {% if message %}
+          <p class="message">{{ message | safe }}</p>
+          {% endif %}
+          <form action="/submit" method="POST"  class="pb-4">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-7 pl-0 pr-0 email">
+                <input type="email" class="form-control text-white" name="email" required placeholder="your email @domain">
+              </div>
+              <div class="col-12 col-md-6 col-lg-5 notified">
+                <button class="btn btn-block py-2 h-100 px-1 button w-75">GET NOTIFIED</button>
+              </div>
+            </div>
+          </form> 
         </div>
-        <div class="col-12 col-md-6 col-lg-5 notified">
-          <button class="btn btn-block button py-2 px-1 w-75">GET NOTIFIED</button>
         </div>
-      </div>
-    </form> 
-   </div>
-       
       </div>
     </div>
+  </section> 
+
+  <section class="glance py-4 text-white"> 
+    <div class="container">
+    <h3 class="text-center py-4">How about a quick tutorial</h3>
+    <div id="carouselControls" class="carousel slide" data-interval="false">
+      <!-- <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+      </ol> -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-6">
+            <div class="py-5">
+              <div>
+                <h4 class="pt-5 pb-4">Home</h4>
+              <p>
+                They say home is where the heart is, 
+                we say home is where the action is. 
+                Did you buy a piece of furniture and the instructions are killing you? 
+                Enter HowToNator! On the home screen, 
+                you can scan that piece of furniture and learn HowTo set it up in record time. 
+                It’s that easy
+              </p>
+              </div>
+            </div>
+            </div>
+            <div class="col-6 text-center" data-toggle="modal" data-target="#img1">
+              <img src="../static/images/screen 3.png" alt="screen1" class="img-fluid">
+            </div>
+            
+            </div>
+
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-6">
+              <h4 class="pt-5 pb-4">Scan, Upload</h4>
+              <p>
+                Scanning takes about a fraction of a second. 
+                Yes, its that fast! We used deep learning phase II to help our AI “Nator” adapt to its surroundings. 
+                Now, you don’t have to ask HowTo twice
+              </p>
+            </div>
+            <div class="col-6 text-center" data-toggle="modal" data-target="#img2">
+              <img src="../static/images/screen 3.png" alt="screen1" class="img-fluid">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-6">
+              <h4 class="pt-5 pb-4">Scan, Upload</h4>
+              <p>
+                Scanning takes about a fraction of a second. 
+                Yes, its that fast! We used deep learning phase II to help our AI “Nator” adapt to its surroundings. 
+                Now, you don’t have to ask HowTo twice
+              </p>
+            </div>
+            <div class="col-6 text-center" data-toggle="modal" data-target="#img3">
+              <img src="../static/images/screen 3.png" alt="screen1" class="img-fluid">
+
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-6">
+              <h4 class="pt-5 pb-4">Scan, Upload</h4>
+              <p>
+                Scanning takes about a fraction of a second. 
+                Yes, its that fast! We used deep learning phase II to help our AI “Nator” adapt to its surroundings. 
+                Now, you don’t have to ask HowTo twice
+              </p>
+            </div>
+            <div class="col-6 text-center" data-toggle="modal" data-target="#img4">
+              <img src="../static/images/screen 3.png" alt="screen1" class="img-fluid">
+
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-6">
+              <h4 class="pt-5 pb-4">Scan, Upload</h4>
+              <p>
+                Scanning takes about a fraction of a second. 
+                Yes, its that fast! We used deep learning phase II to help our AI “Nator” adapt to its surroundings. 
+                Now, you don’t have to ask HowTo twice
+              </p>
+            </div>
+            <div class="col-6 text-center" data-toggle="modal" data-target="#img5">
+              <img src="../static/images/screen 3.png" alt="screen1" class="img-fluid">
+
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-6">
+              <h4 class="pt-5 pb-4">Scan, Upload</h4>
+              <p>
+                Scanning takes about a fraction of a second. 
+                Yes, its that fast! We used deep learning phase II to help our AI “Nator” adapt to its surroundings. 
+                Now, you don’t have to ask HowTo twice
+              </p>
+            </div>
+            <div class="col-6 text-center" data-toggle="modal" data-target="#img6">
+              <img src="../static/images/screen 7.png" alt="screen1" class="img-fluid">
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-butt d-flex position-absolute justify-content-start w-100 h-auto">
+        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <!-- Modal -->
+    <div>
+      <div class="modal" id="img1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <img src="../static/images/x-square (1).svg" alt="close" class="w-100">
+        </button>
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document" id="exampleModalLabel">
+          <div class="modal-content">
+            <img src="../static/images/meritt-thomas-AYCA7N_oPtU-unsplash 1.png" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="img2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <img src="../static/images/x-square (1).svg" alt="close" class="w-100">
+        </button>
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document" id="exampleModalLabel">
+          <div class="modal-content">
+            <img src="../static/images/meritt-thomas-AYCA7N_oPtU-unsplash 1.png" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="img3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <img src="../static/images/x-square (1).svg" alt="close" class="w-100">
+        </button>
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document" id="exampleModalLabel">
+          <div class="modal-content">
+            <img src="../static/images/meritt-thomas-AYCA7N_oPtU-unsplash 1.png" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="img4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <img src="../static/images/x-square (1).svg" alt="close" class="w-100">
+        </button>
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document" id="exampleModalLabel">
+          <div class="modal-content">
+            <img src="../static/images/meritt-thomas-AYCA7N_oPtU-unsplash 1.png" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="img5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <img src="../static/images/x-square (1).svg" alt="close" class="w-100">
+        </button>
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document" id="exampleModalLabel">
+          <div class="modal-content">
+            <img src="../static/images/meritt-thomas-AYCA7N_oPtU-unsplash 1.png" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="img6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <img src="../static/images/x-square (1).svg" alt="close" class="w-100">
+        </button>
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document" id="exampleModalLabel">
+          <div class="modal-content">
+            <img src="../static/images/meritt-thomas-AYCA7N_oPtU-unsplash 1.png" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
-</section>
+  </section>
 
 
+<!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<!-- popper js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<!-- bootstrap js -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+<!-- particles js -->
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+
+<!-- animation on scroll js -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- custom js -->
 <script type="text/javascript" src="{{ url_for('static', filename='js/index.js')}}"></script>
+
+<!-- initialize animation on scroll -->
+<script>
+  AOS.init();
+</script>
+
 </body>
 </html>
