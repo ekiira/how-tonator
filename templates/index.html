@@ -25,7 +25,6 @@
  
 <!-- particles.js container --> 
 <div id="particles-js"></div >
-
     
   <section class="landing pb-5">
     <nav id="idea" class="navbar navbar-expand-lg navbar-dark">
@@ -82,7 +81,8 @@
             </div>
           </div>  
 
-          <p class="small-text"> We are currently in our private beta,  
+          <p class="small-text"> 
+            We are currently in our private beta,  
             but we hope to launch in the coming weeks. 
             Super excited like we are? 
             Get notified when we launch.
@@ -91,13 +91,14 @@
           {% if message %}
           <p class="message">{{ message | safe }}</p>
           {% endif %}
+          
           <form action="/submit" method="POST"  class="pb-4">
             <div class="row">
               <div class="col-12 col-md-6 col-lg-7 pl-0 pr-0 email">
                 <input type="email" class="form-control text-white" name="email" required placeholder="your email @domain">
               </div>
               <div class="col-12 col-md-6 col-lg-5 notified">
-                <button class="btn btn-block py-2 h-100 px-1 button w-75">GET NOTIFIED</button>
+                <button class="btn btn-block py-2 h-100 px-1 button w-75">Notify me</button>
               </div>
             </div>
           </form> 
@@ -108,24 +109,25 @@
   </section> 
 
   <section class="glance py-4 text-white"> 
-    <div class="container">
-    <h3 class="text-center py-4">How about a quick tutorial</h3>
+    <div class="container w-75">
+    <h3 class="text-center pb-4 pt-3"> How about a quick Walkthrough?</h3>
     <div id="carouselControls" class="carousel slide" data-interval="false">
-      <!-- <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-      </ol> -->
+      <ol class="carousel-indicators">
+        <li data-target="#carouselControls" data-slide-to="0" class="active mr-2"></li>
+        <li data-target="#carouselControls" data-slide-to="1" class="mr-2"></li>
+        <li data-target="#carouselControls" data-slide-to="2" class="mr-2"></li>
+        <li data-target="#carouselControls" data-slide-to="3" class="mr-2"></li>
+        <li data-target="#carouselControls" data-slide-to="4" class="mr-2"></li>
+        <li data-target="#carouselControls" data-slide-to="5" class="mr-2"></li>
+      </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-md-6">
             <div class="py-5">
               <div>
-                <h4 class="pt-5 pb-4">Home</h4>
+                <img src="../static/images/Vector.svg" alt="">
+                <h4 class="pt-2 pb-3">Home</h4>
               <p>
                 They say home is where the heart is, 
                 we say home is where the action is. 
@@ -137,8 +139,8 @@
               </div>
             </div>
             </div>
-            <div class="col-6 text-center" data-toggle="modal" data-target="#img1">
-              <img src="../static/images/screen 3.png" alt="screen1" class="img-fluid">
+            <div class="col-12 col-md-6 text-center" data-toggle="modal" data-target="#img1">
+              <img src="../static/images/screen 2.png" alt="screen1" class="img-fluid">
             </div>
             
             </div>
@@ -146,92 +148,126 @@
         </div>
         <div class="carousel-item">
           <div class="row">
-            <div class="col-6">
-              <h4 class="pt-5 pb-4">Scan, Upload</h4>
-              <p>
-                Scanning takes about a fraction of a second. 
-                Yes, its that fast! We used deep learning phase II to help our AI “Nator” adapt to its surroundings. 
-                Now, you don’t have to ask HowTo twice
-              </p>
+                <div class="col-12 col-md-6">
+
+         <div class="py-5">
+          <div>
+            <img src="../static/images/qr-code 3.svg" alt="scan">
+            <h4 class="pt-2 pb-3">Scan</h4>
+            <p>
+              Scanning takes about a fraction of a second. 
+              Yes, its that fast! We used deep learning legume 
+              to allow our SmartBrain adapt to its environment. 
+              Now, you don’t have to ask HowTo twice.
+            </p>
+          </div>
+         </div>
             </div>
-            <div class="col-6 text-center" data-toggle="modal" data-target="#img2">
+            <div class="col-12 col-md-6 text-center" data-toggle="modal" data-target="#img2">
               <img src="../static/images/screen 3.png" alt="screen1" class="img-fluid">
             </div>
           </div>
         </div>
         <div class="carousel-item">
           <div class="row">
-            <div class="col-6">
-              <h4 class="pt-5 pb-4">Scan, Upload</h4>
-              <p>
-                Scanning takes about a fraction of a second. 
-                Yes, its that fast! We used deep learning phase II to help our AI “Nator” adapt to its surroundings. 
-                Now, you don’t have to ask HowTo twice
-              </p>
-            </div>
-            <div class="col-6 text-center" data-toggle="modal" data-target="#img3">
-              <img src="../static/images/screen 3.png" alt="screen1" class="img-fluid">
+                <div class="col-12 col-md-6">
 
+         <div class="py-5">
+          <div>
+            <img src="../static/images/cloud.png" alt="scan">
+            <h4 class="pt-2 pb-3">Upload</h4>
+            <p>
+              Scanning takes about a fraction of a second. 
+              Yes, its that fast! We used deep learning phase II to help our AI “Nator” adapt to its surroundings. 
+              Now, you don’t have to ask HowTo twice
+            </p>
+          </div>
+         </div>
+            </div>
+            <div class="col-12 col-md-6 text-center" data-toggle="modal" data-target="#img3">
+              <img src="../static/images/screen 4.png" alt="screen1" class="img-fluid">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="carousel-item">
+          <div class="row">
+                <div class="col-12 col-md-6">
+
+         <div class="py-5">
+          <div>
+            <img src="../static/images/document 1.png" alt="scan">
+            <h4 class="pt-2 pb-3">Files Files Files</h4>
+            <p>
+              HowToNator helps your DIY experience by giving you 
+              the information you need in audio and text by default. 
+              We also let you pick and choose in settings just for kicks
+            </p>
+          </div>
+         </div>
+            </div>
+            <div class="col-12 col-md-6 text-center" data-toggle="modal" data-target="#img4">
+              <img src="../static/images/screen 5.png" alt="screen1" class="img-fluid">
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row">
+                <div class="col-12 col-md-6">
+
+         <div class="py-5">
+          <div>
+            <img src="../static/images/brain 1.png" alt="scan">
+            <h4 class="pt-2 pb-3"> SmartBrain</h4>
+            SmartBrain uses its core deep learning to adapt to your 
+            environment so it never misses a beat. With its advanced technology, 
+            it uses sensors to know if you have missed a step in the process and helps you figure it out.
+            </p>
+          </div>
+         </div>
+            </div>
+            <div class="col-12 col-md-6 text-center" data-toggle="modal" data-target="#img5">
+              <img src="../static/images/screen 6.png" alt="screen1" class="img-fluid">
             </div>
           </div>
         </div>
         <div class="carousel-item">
           <div class="row">
-            <div class="col-6">
-              <h4 class="pt-5 pb-4">Scan, Upload</h4>
-              <p>
-                Scanning takes about a fraction of a second. 
-                Yes, its that fast! We used deep learning phase II to help our AI “Nator” adapt to its surroundings. 
-                Now, you don’t have to ask HowTo twice
-              </p>
-            </div>
-            <div class="col-6 text-center" data-toggle="modal" data-target="#img4">
-              <img src="../static/images/screen 3.png" alt="screen1" class="img-fluid">
+                <div class="col-12 col-md-6">
 
+         <div class="py-5">
+          <div>
+            <img src="../static/images/all.png" alt="scan">
+            <h4 class="pt-2 pb-3"> All in one place</h4>
+            With Overview, you can see your recent DIYs 
+            carefully curated all in one place to keep you ontop of everything. 
+            And the best part, you can grab these files as many times as you want.
+            </p>
+          </div>
+         </div>
+            </div>
+            <div class="col-12 col-md-6 text-center" data-toggle="modal" data-target="#img6">
+              <img src="../static/images/screen 13.png" alt="screen1" class="img-fluid">
             </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-6">
-              <h4 class="pt-5 pb-4">Scan, Upload</h4>
-              <p>
-                Scanning takes about a fraction of a second. 
-                Yes, its that fast! We used deep learning phase II to help our AI “Nator” adapt to its surroundings. 
-                Now, you don’t have to ask HowTo twice
-              </p>
-            </div>
-            <div class="col-6 text-center" data-toggle="modal" data-target="#img5">
-              <img src="../static/images/screen 3.png" alt="screen1" class="img-fluid">
 
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-6">
-              <h4 class="pt-5 pb-4">Scan, Upload</h4>
-              <p>
-                Scanning takes about a fraction of a second. 
-                Yes, its that fast! We used deep learning phase II to help our AI “Nator” adapt to its surroundings. 
-                Now, you don’t have to ask HowTo twice
-              </p>
-            </div>
-            <div class="col-6 text-center" data-toggle="modal" data-target="#img6">
-              <img src="../static/images/screen 7.png" alt="screen1" class="img-fluid">
 
-            </div>
-          </div>
-        </div>
       </div>
 
       <div class="carousel-butt d-flex position-absolute justify-content-start w-100 h-auto">
-        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true">
+
+          </span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true">
+            
+          </span>
           <span class="sr-only">Next</span>
         </a>
       </div>
@@ -242,9 +278,9 @@
         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <img src="../static/images/x-square (1).svg" alt="close" class="w-100">
         </button>
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document" id="exampleModalLabel">
+        <div class="modal-dialog modal-dialog-centered" role="document" id="exampleModalLabel">
           <div class="modal-content">
-            <img src="../static/images/meritt-thomas-AYCA7N_oPtU-unsplash 1.png" alt="" class="img-fluid">
+            <img src="../static/images/modal1.png" alt="" class="img-fluid">
           </div>
         </div>
       </div>
@@ -252,9 +288,9 @@
         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <img src="../static/images/x-square (1).svg" alt="close" class="w-100">
         </button>
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document" id="exampleModalLabel">
+        <div class="modal-dialog modal-dialog-centered" role="document" id="exampleModalLabel">
           <div class="modal-content">
-            <img src="../static/images/meritt-thomas-AYCA7N_oPtU-unsplash 1.png" alt="" class="img-fluid">
+            <img src="../static/images/modal2.png" alt="" class="img-fluid">
           </div>
         </div>
       </div>
@@ -262,9 +298,9 @@
         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <img src="../static/images/x-square (1).svg" alt="close" class="w-100">
         </button>
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document" id="exampleModalLabel">
+        <div class="modal-dialog modal-dialog-centered" role="document" id="exampleModalLabel">
           <div class="modal-content">
-            <img src="../static/images/meritt-thomas-AYCA7N_oPtU-unsplash 1.png" alt="" class="img-fluid">
+            <img src="../static/images/modal3.png" alt="" class="img-fluid">
           </div>
         </div>
       </div>
@@ -272,9 +308,9 @@
         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <img src="../static/images/x-square (1).svg" alt="close" class="w-100">
         </button>
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document" id="exampleModalLabel">
+        <div class="modal-dialog modal-dialog-centered" role="document" id="exampleModalLabel">
           <div class="modal-content">
-            <img src="../static/images/meritt-thomas-AYCA7N_oPtU-unsplash 1.png" alt="" class="img-fluid">
+            <img src="../static/images/modal4.png" alt="" class="img-fluid">
           </div>
         </div>
       </div>
@@ -282,9 +318,9 @@
         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <img src="../static/images/x-square (1).svg" alt="close" class="w-100">
         </button>
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document" id="exampleModalLabel">
+        <div class="modal-dialog modal-dialog-centered" role="document" id="exampleModalLabel">
           <div class="modal-content">
-            <img src="../static/images/meritt-thomas-AYCA7N_oPtU-unsplash 1.png" alt="" class="img-fluid">
+            <img src="../static/images/modal5.png" alt="" class="img-fluid">
           </div>
         </div>
       </div>
@@ -292,9 +328,9 @@
         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <img src="../static/images/x-square (1).svg" alt="close" class="w-100">
         </button>
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document" id="exampleModalLabel">
+        <div class="modal-dialog modal-dialog-centered" role="document" id="exampleModalLabel">
           <div class="modal-content">
-            <img src="../static/images/meritt-thomas-AYCA7N_oPtU-unsplash 1.png" alt="" class="img-fluid">
+            <img src="../static/images/modal6.png" alt="" class="img-fluid">
           </div>
         </div>
       </div>
