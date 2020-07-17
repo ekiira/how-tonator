@@ -71,6 +71,19 @@ body {
   font-weight: 700;
 }
 
+.screen-text {
+  font-size: 20px;
+}
+
+.section2 {
+  display: block;
+  z-index: 100;
+}
+
+.form {
+  padding-left: 16px;
+}
+
 .button:hover {
   color:white;
   background-color: #3C24B0;
@@ -86,6 +99,7 @@ body {
   font-weight: 400;
   font-size: 15px;
   line-height: 22px;
+
 }
 
 .wrapper {
@@ -188,7 +202,7 @@ button {
 } */
 
 .modal {
-  background: rgba(226, 221, 221, 0.8);
+  background: rgba(226, 221, 221, 0.3);
 }
 
 .close {
@@ -239,12 +253,21 @@ button {
   }
 }
 
+@media only screen and (max-width: 766px) {
+  .center {
+    text-align: center;
+  }
+}
+
 @media (max-width: 1200px) {
-  .wrapper {
+  .wrapper { 
     width: 65%;
     margin: 5% auto;
   }
   #particles-js {
+    display: none;
+  }
+  .icons {
     display: none;
   }
 }

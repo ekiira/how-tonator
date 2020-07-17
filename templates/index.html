@@ -92,13 +92,13 @@
           <p class="message">{{ message | safe }}</p>
           {% endif %}
           
-          <form action="/submit" method="POST"  class="pb-4">
-            <div class="row">
+          <form action="/submit" method="POST"  class="pb-2">
+            <div class="row form">
               <div class="col-12 col-md-6 col-lg-7 pl-0 pr-0 email">
                 <input type="email" class="form-control text-white" name="email" required placeholder="your email @domain">
               </div>
               <div class="col-12 col-md-6 col-lg-5 notified">
-                <button class="btn btn-block py-2 h-100 px-1 button w-75">Notify me</button>
+                <button class="btn btn-block py-2 h-100 px-1 button w-100">Notify me</button>
               </div>
             </div>
           </form> 
@@ -108,9 +108,9 @@
     </div>
   </section> 
 
-  <section class="glance py-4 text-white"> 
+  <section class="glance pt-2 pb-4 text-white"> 
     <div class="container w-75">
-    <h3 class="text-center pb-4 pt-3"> How about a quick Walkthrough?</h3>
+    <h3 class="text-center pb-4 pt-3 section2"> How about a quick Walkthrough?</h3>
     <div id="carouselControls" class="carousel slide" data-interval="false">
       <ol class="carousel-indicators">
         <li data-target="#carouselControls" data-slide-to="0" class="active mr-2"></li>
@@ -123,12 +123,12 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6  order-2 order-md-1">
             <div class="py-5">
               <div>
-                <img src="../static/images/Vector.svg" alt="">
-                <h4 class="pt-2 pb-3">Home</h4>
-              <p>
+                <img src="../static/images/Vector.svg" alt="icon" class="icons">
+                <h4 class="pt-2 pb-3 center">Home</h4>
+              <p class="center screen-text">
                 They say home is where the heart is, 
                 we say home is where the action is. 
                 Did you buy a piece of furniture and the instructions are killing you? 
@@ -139,8 +139,8 @@
               </div>
             </div>
             </div>
-            <div class="col-12 col-md-6 text-center" data-toggle="modal" data-target="#img1">
-              <img src="../static/images/screen 2.png" alt="screen1" class="img-fluid">
+            <div class="col-12 col-md-6 text-center order-1 order-md-2" data-toggle="modal" data-target="#img1">
+              <img src="../static/images/image1.png" alt="screen1" class="img-fluid">
             </div>
             
             </div>
@@ -148,13 +148,13 @@
         </div>
         <div class="carousel-item">
           <div class="row">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 order-2 order-md-1">
 
          <div class="py-5">
           <div>
-            <img src="../static/images/qr-code 3.svg" alt="scan">
-            <h4 class="pt-2 pb-3">Scan</h4>
-            <p>
+            <img src="../static/images/qr-code 3.svg" alt="icon" class="icons">
+            <h4 class="pt-2 pb-3 center">Scan</h4>
+            <p class="center">
               Scanning takes about a fraction of a second. 
               Yes, its that fast! We used deep learning legume 
               to allow our SmartBrain adapt to its environment. 
@@ -163,20 +163,20 @@
           </div>
          </div>
             </div>
-            <div class="col-12 col-md-6 text-center" data-toggle="modal" data-target="#img2">
-              <img src="../static/images/screen 3.png" alt="screen1" class="img-fluid">
+            <div class="col-12 col-md-6 text-center order-1 order-md-2" data-toggle="modal" data-target="#img2">
+              <img src="../static/images/image2.png" alt="screen1" class="img-fluid">
             </div>
           </div>
         </div>
         <div class="carousel-item">
           <div class="row">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 order-2 order-md-1">
 
          <div class="py-5">
           <div>
-            <img src="../static/images/cloud.png" alt="scan">
-            <h4 class="pt-2 pb-3">Upload</h4>
-            <p>
+            <img src="../static/images/cloud.png" alt="icon" class="icons" >
+            <h4 class="pt-2 pb-3 center">Upload</h4>
+            <p class="center">
               Scanning takes about a fraction of a second. 
               Yes, its that fast! We used deep learning phase II to help our AI “Nator” adapt to its surroundings. 
               Now, you don’t have to ask HowTo twice
@@ -184,8 +184,8 @@
           </div>
          </div>
             </div>
-            <div class="col-12 col-md-6 text-center" data-toggle="modal" data-target="#img3">
-              <img src="../static/images/screen 4.png" alt="screen1" class="img-fluid">
+            <div class="col-12 col-md-6 text-center order-1 order-md-2" data-toggle="modal" data-target="#img3">
+              <img src="../static/images/image3.png" alt="screen1" class="img-fluid">
             </div>
           </div>
         </div>
@@ -193,13 +193,13 @@
 
         <div class="carousel-item">
           <div class="row">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 order-2 order-md-1">
 
          <div class="py-5">
           <div>
-            <img src="../static/images/document 1.png" alt="scan">
-            <h4 class="pt-2 pb-3">Files Files Files</h4>
-            <p>
+            <img src="../static/images/document 1.png" alt="icon" class="icons" >
+            <h4 class="pt-2 pb-3 center">Files Files Files</h4>
+            <p class="center">
               HowToNator helps your DIY experience by giving you 
               the information you need in audio and text by default. 
               We also let you pick and choose in settings just for kicks
@@ -207,20 +207,21 @@
           </div>
          </div>
             </div>
-            <div class="col-12 col-md-6 text-center" data-toggle="modal" data-target="#img4">
-              <img src="../static/images/screen 5.png" alt="screen1" class="img-fluid">
+            <div class="col-12 col-md-6 text-center order-1 order-md-2" data-toggle="modal" data-target="#img4">
+              <img src="../static/images/image4.png" alt="screen1" class="img-fluid">
             </div>
           </div>
         </div>
 
         <div class="carousel-item">
           <div class="row">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 order-2 order-md-1">
 
          <div class="py-5">
           <div>
-            <img src="../static/images/brain 1.png" alt="scan">
-            <h4 class="pt-2 pb-3"> SmartBrain</h4>
+            <img src="../static/images/brain 1.png" alt="icon" class="icons">
+            <h4 class="pt-2 pb-3 center"> SmartBrain</h4>
+            <p class="center">
             SmartBrain uses its core deep learning to adapt to your 
             environment so it never misses a beat. With its advanced technology, 
             it uses sensors to know if you have missed a step in the process and helps you figure it out.
@@ -228,19 +229,20 @@
           </div>
          </div>
             </div>
-            <div class="col-12 col-md-6 text-center" data-toggle="modal" data-target="#img5">
-              <img src="../static/images/screen 6.png" alt="screen1" class="img-fluid">
+            <div class="col-12 col-md-6 text-center order-1 order-md-2" data-toggle="modal" data-target="#img5">
+              <img src="../static/images/image5.png" alt="screen1" class="img-fluid">
             </div>
           </div>
         </div>
         <div class="carousel-item">
           <div class="row">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 order-2 order-md-1">
 
          <div class="py-5">
           <div>
-            <img src="../static/images/all.png" alt="scan">
-            <h4 class="pt-2 pb-3"> All in one place</h4>
+            <img src="../static/images/all.png" alt="icon" class="icons">
+            <h4 class="pt-2 pb-3 center"> All in one place</h4>
+            <p class="center">
             With Overview, you can see your recent DIYs 
             carefully curated all in one place to keep you ontop of everything. 
             And the best part, you can grab these files as many times as you want.
@@ -248,8 +250,8 @@
           </div>
          </div>
             </div>
-            <div class="col-12 col-md-6 text-center" data-toggle="modal" data-target="#img6">
-              <img src="../static/images/screen 13.png" alt="screen1" class="img-fluid">
+            <div class="col-12 col-md-6 text-center order-1 order-md-2" data-toggle="modal" data-target="#img6">
+              <img src="../static/images/image6.png" alt="screen1" class="img-fluid">
             </div>
           </div>
         </div>
