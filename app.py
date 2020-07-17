@@ -36,7 +36,5 @@ def submit():
       return render_template("index.html", message="We are really excited too but you're already on our mailing list!")
       
 
-
-
 if __name__ == '__main__':
   app.run()
