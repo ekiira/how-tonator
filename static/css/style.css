@@ -71,7 +71,6 @@ body {
   font-weight: 700;
 }
 
-
 .screen-text {
   font-size: 20px;
 }
@@ -88,6 +87,7 @@ body {
 .button:hover {
   color:white;
   background-color: #3C24B0;
+  border: 1px solid white;
 }
 
 .big-text {
@@ -108,18 +108,18 @@ body {
   margin: 2% auto;
 }
 
-.bot {
+/* .bot {
   height: 355px;
   width: 100%;
   border-radius: 4px;
-}
+} */
  
-#one, #two, #three {
+#one, #two, #three, #four, #five {
   display: none;
   -webkit-animation-name: slideInUp;
   animation-name: slideInUp;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   }
@@ -145,62 +145,6 @@ body {
   transform: translateY(0);
   }
 } 
-/* 
-.button {
-  border:none;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.88);
-  overflow: hidden;
-  color: #fff;
-}
-
-.button:hover {
-  color: #000;
-}
-
-.button:hover::after {
-  bottom: -200px;
-}
-
-.button:hover::before {
-  top: -200px;
-}
-
-.button::after{
-  content: '';
-  left: -100px;
-  bottom: -163px;
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background: #000;
-  z-index: -1;
-  transform: rotate(20deg);
-  transition: all .25s ease;
-}
-
-.button::before{
-  content: '';
-  left: -100px;
-  bottom: -163px;
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background: #000;
-  z-index: -1;
-  transform: rotate(20deg);
-  transition: all .25s ease;
-}
-
-button {
-  padding: 12px 22px;
-  font-weight: 500;
-  cursor: pointer;
-  position: relative;
-  margin: 5px;
-  outline: none;
-  background: transparent;
-  transition: all .25s ease;
-} */
 
 .modal {
   background: rgba(226, 221, 221, 0.3);
@@ -217,6 +161,7 @@ button {
 .carousel-indicators {
   margin-right: 20%;
   margin-left: 0; 
+  bottom: -70px
 }
 
 .carousel-indicators .active {
@@ -237,6 +182,13 @@ button {
   background: #3C24B0;
 }
 
+#bot{
+  background-color: transparent;
+  height: 70vh;
+  width: 100%;
+  position: relative;
+overflow: auto;
+}
 
 /* Media Queries */
 
@@ -247,11 +199,16 @@ button {
   }
 }
 
+
 @media (min-width: 451px) and (max-width: 800px) {
   .wrapper {
     width: 85%;
     margin: 5% auto;
   }
+  
+  #bot{
+    height: 100vh;
+}
 }
 
 @media only screen and (max-width: 766px) {
@@ -271,6 +228,7 @@ button {
   .icons {
     display: none;
   }
+  
 }
 
 @media only screen and (max-width: 765px) {
@@ -293,33 +251,11 @@ button {
   .msg {
     width: 100%;
   }
-}
-
-/* 
-@media (min-width: 478px) and (max-width:766px) {
-  .button::after {
-    content: '';
-    left: -50px;
-    bottom: -113px;
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background: #000;
-    z-index: -1;
-    transform: rotate(20deg);
-    transition: all .25s ease;
+  .wrapper {
+    width: 90%;
   }
-  
-  .button::before {
-    content: '';
-    right: -50px;
-    top: -113px;
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background: #000;
-    z-index: -1;
-    transform: rotate(20deg);
-    transition: all .25s ease;
-  } */
-/* } */ 
+  .carousel-indicators {
+    justify-content: center;
+    margin-right: 0;
+  }
+}

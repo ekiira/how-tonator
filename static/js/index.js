@@ -111,24 +111,41 @@ particlesJS("particles-js", {
 
 // CUSTOM
 
-const li1 = document.getElementById('one')
-const li2 = document.getElementById('two')
-const li3 = document.getElementById('three')
+const li1 = document.getElementById('one');
+const li2 = document.getElementById('two');
+const li3 = document.getElementById('three');
+const li4 = document.getElementById('four');
+const li5 = document.getElementById('five');
+
+
 
 window.addEventListener('load', () => {
   setTimeout(() => {
     li1.style.display = 'block' ;
-  }, 250)
-})
-
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    li2.style.display = 'block' 
   }, 500)
 })
 
 window.addEventListener('load', () => {
   setTimeout(() => {
-    li3.style.display = 'block' 
-  }, 750)
+    li2.style.display = 'block' 
+  }, 1000)
 })
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    li3.style.display = 'block' 
+  }, 1500)
+})
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+      li4.style.display = 'block' 
+    }, 2000)
+  })
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      li5.style.display = 'block' 
+    }, 2500)
+  })
+
