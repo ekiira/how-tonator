@@ -54,10 +54,7 @@ body {
 .msg {
   background-color: white;
   color: black;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 27px;
-  width: 75%;
+  max-width: 60%;
 }
 
 .type {
@@ -221,6 +218,9 @@ overflow: auto;
 @media only screen and (max-width: 766px) {
   .center {
     text-align: center;
+  }
+  .msg {
+    max-width: 75%;
   }
 }
 
