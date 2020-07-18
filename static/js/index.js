@@ -116,7 +116,7 @@ const li2 = document.getElementById('two');
 const li3 = document.getElementById('three');
 const li4 = document.getElementById('four');
 const li5 = document.getElementById('five');
-
+const chat = document.getElementById('chat')
 
 
 window.addEventListener('load', () => {
@@ -148,4 +148,6 @@ window.addEventListener('load', () => {
       li5.style.display = 'block' 
     }, 2500)
   })
+
+  console.log('hh', chat.scrollHeight)
 

@@ -43,9 +43,16 @@ body {
   height:50px;
 }
 
+.msg-left {
+  border-radius: 70px 70px 70px 0px
+}
+
+.msg-right {
+  border-radius: 70px 70px 0px 70px;
+}
+
 .msg {
   background-color: white;
-  border-radius: 30px;
   color: black;
   font-weight: 700;
   font-size: 20px;
