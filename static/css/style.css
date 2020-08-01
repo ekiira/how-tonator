@@ -111,12 +111,6 @@ body {
   width: 50%;
   margin: 2% auto;
 }
-
-/* .bot {
-  height: 355px;
-  width: 100%;
-  border-radius: 4px;
-} */
  
 #one, #two, #three, #four, #five {
   display: none;
@@ -209,10 +203,10 @@ overflow: auto;
     width: 85%;
     margin: 5% auto;
   }
-  
+/*   
   #bot{
     height: 100vh;
-}
+} */
 }
 
 @media only screen and (max-width: 766px) {
